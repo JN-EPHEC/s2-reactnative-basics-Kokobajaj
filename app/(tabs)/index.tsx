@@ -47,4 +47,3 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
-// je suis bonjour
