@@ -1,4 +1,7 @@
-import { ScrollView, StyleSheet } from "react-native";
+import TodoItem from "@/components/TodoItem";
+import { ScrollView, StyleSheet, Text } from "react-native";
+import ProfileCard from "../../components/ProfileCard";
+
 
 const USERS_DATA = [
   { id: '1', nom: 'Alice Martin', email: 'alice.martin@email.com' },
@@ -8,12 +11,45 @@ const USERS_DATA = [
   { id: '5', nom: 'Émilie Rousseau', email: 'emilie.rousseau@email.com' },
 ];
 
-
+const Todo = [
+  {todo: 'Learn React Native'}
+] ;
+ 
 export default function HomeScreen() {
   return (
       <ScrollView>
-        { /* Render the list of users using the UserItem component */ }
-      </ScrollView>
+        <ProfileCard
+          name="Alice"
+          jobTitle="React Native Developer"
+          imageUrl="https://picsum.photos/200/300"
+        />
+        <ProfileCard
+          name="Komal"
+          jobTitle="E-Business Student"
+          imageUrl="https://picsum.photos/200/300"
+        />
+
+        <ProfileCard
+          name="Lucas"
+          jobTitle="E-Business Student"
+          imageUrl="https://picsum.photos/200/300"
+        />
+        
+        <Text style={styles.title}>My Todo List</Text>
+
+
+        <TodoItem
+          todo = "Learn React Native"
+        />
+
+        <TodoItem 
+          todo = "Build a static UI"
+        />
+
+        <TodoItem 
+        todo = "Practice with StyleSheet"
+        />
+        </ScrollView>
   );
 }
 
